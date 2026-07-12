@@ -1,4 +1,5 @@
-[
+{
+  "mods": [
     "appleskin-fabric-mc26.2-3.0.10.jar",
     "areas-26.2.0-6.4.jar",
     "BadOptimizations-2.4.1-26.2-fabric.jar",
@@ -77,4 +78,5 @@
     "xaeroworldmap-fabric-26.2-1.42.0.jar",
     "yet_another_config_lib_v3-3.9.5+26.2-fabric.jar",
     "zoomify-2.16.1+26.2.jar"
-]
+  ]
+}
