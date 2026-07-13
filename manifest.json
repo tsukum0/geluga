@@ -1,5 +1,5 @@
 {
-  "version": "2.5.3",
+  "version": "2.5.5",
   "mods": [
     "3dskinlayers",
     "advancedperipherals",
@@ -39,6 +39,7 @@
     "lithium",
     "mouse-tweaks",
     "no-chat-reports",
+    "open-parties-and-claims",
     "puzzles-lib",
     "resourceful-lib",
     "resourcify",
@@ -56,6 +57,8 @@
     "visual-workbench",
     "waystones",
     "what-are-they-up-to",
+    "xaeros-minimap",
+    "xaeros-world-map",
     "yacl"
   ]
 }
