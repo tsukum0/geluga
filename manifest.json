@@ -1,5 +1,5 @@
 {
-  "version": "2.5.5",
+  "version": "2.5.6",
   "mods": [
     "3dskinlayers",
     "advancedperipherals",
@@ -19,6 +19,7 @@
     "create-aeronautics",
     "create-big-cannons",
     "create-connected",
+    "create-enchantment-industry",
     "create-goggles",
     "createaddition",
     "distanthorizons",
@@ -62,8 +63,5 @@
     "xaeros-minimap",
     "xaeros-world-map",
     "yacl"
-  ],
-  "themes": [
-    "sakura.json"
   ]
 }
