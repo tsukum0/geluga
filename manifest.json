@@ -1,5 +1,5 @@
 {
-  "version": "2.5.7",
+  "version": "2.5.8",
   "mods": [
     "3dskinlayers",
     "advancedperipherals",
@@ -19,8 +19,8 @@
     "create-aeronautics",
     "create-big-cannons",
     "create-connected",
-    "create-enchantment-industry",
     "create-dragons-plus",
+    "create-enchantment-industry",
     "create-goggles",
     "createaddition",
     "distanthorizons",
