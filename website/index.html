@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geluga - Servidor de Minecraft</title>
+
+  <script>
+    var urlFotoServidor = "https://raw.githubusercontent.com/mojang/minecraft-assets/master/assets/icons/icon.png";
+  </script>
+  <!-- ============================================= -->
+
+  <!-- Metadados do Ícone (Favicon) usando a variável -->
+  <script>
+    document.write('<link rel="icon" href="' + urlFotoServidor + '" type="image/png">');
+  </script>
+
   <!-- Tailwind CSS via CDN para um design moderno sem instalação -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts (Russo One para títulos gamer, Inter para texto) -->
@@ -30,7 +41,10 @@
   <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center font-bold text-slate-950 text-xl shadow-lg shadow-emerald-500/30">G</div>
+        <!-- Ícone do Servidor (Navegação) usando a variável via JS -->
+        <script>
+          document.write('<img src="' + urlFotoServidor + '" alt="Geluga Icon" class="w-10 h-10 rounded-lg shadow-lg shadow-emerald-500/30 object-cover">');
+        </script>
         <span class="font-gamer text-2xl tracking-wider text-white">GELUGA</span>
       </div>
       <div class="hidden md:flex gap-8 font-semibold text-sm text-slate-300">
@@ -234,7 +248,8 @@
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-gamer text-lg py-4 px-8 rounded-2xl glow-green transition-all duration-300 flex items-center justify-center gap-3">
+        <!-- ATUALIZADO: Link de Download para Windows -->
+        <a href="https://github.com/tsukum0/geluga/releases/download/Download/gelauncher-portable-alpha-super-instavel-da-silva-v2.5.4.1.exe" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-gamer text-lg py-4 px-8 rounded-2xl glow-green transition-all duration-300 flex items-center justify-center gap-3">
           <i class="fa-brands fa-windows text-2xl"></i>
           DOWNLOAD PARA WINDOWS
         </a>
@@ -251,12 +266,16 @@
   <footer class="border-t border-slate-900 bg-slate-950 py-12 px-6 text-slate-500 text-sm">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-slate-800 rounded flex items-center justify-center font-bold text-white">G</div>
+        <!-- Ícone do Servidor (Rodapé) usando a variável via JS -->
+        <script>
+          document.write('<img src="' + urlFotoServidor + '" alt="Geluga Icon" class="w-8 h-8 rounded object-cover">');
+        </script>
         <span class="font-gamer text-white tracking-wider">GELUGA NETWORK</span>
       </div>
       <p>© 2026 Geluga. Não somos afiliados à Mojang AB.</p>
       <div class="flex gap-6 text-slate-400 text-lg">
-        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-discord"></i></a>
+        <!-- ATUALIZADO: Link do Botão do Discord -->
+        <a href="https://discord.gg/Dwq5e8sDw4" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-discord"></i></a>
         <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
       </div>
