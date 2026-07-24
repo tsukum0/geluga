@@ -26,12 +26,12 @@
     body { font-family: 'Inter', sans-serif; }
     h1, h2, h3, .font-gamer { font-family: 'Russo One', sans-serif; }
     
-    /* Efeito de brilho no botão principal */
-    .glow-green {
-      box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.6);
+    /* ATUALIZADO: Efeito de brilho no botão principal alterado para Laranja (Orange 500) */
+    .glow-orange {
+      box-shadow: 0 0 35px -5px rgba(249, 115, 22, 0.6);
     }
-    .glow-green:hover {
-      box-shadow: 0 0 50px 0px rgba(16, 185, 129, 0.9);
+    .glow-orange:hover {
+      box-shadow: 0 0 50px 0px rgba(249, 115, 22, 0.9);
     }
   </style>
 </head>
@@ -47,14 +47,16 @@
         </script>
         <span class="font-gamer text-2xl tracking-wider text-white">GELUGA</span>
       </div>
+      <!-- ATUALIZADO: hover:text-emerald-400 -> hover:text-orange-400 -->
       <div class="hidden md:flex gap-8 font-semibold text-sm text-slate-300">
-        <a href="#inicio" class="hover:text-emerald-400 transition-colors">Início</a>
-        <a href="#sobre" class="hover:text-emerald-400 transition-colors">Sobre</a>
-        <a href="#galeria" class="hover:text-emerald-400 transition-colors">Galeria</a>
-        <a href="#novidades" class="hover:text-emerald-400 transition-colors">Novidades</a>
+        <a href="#inicio" class="hover:text-orange-400 transition-colors">Início</a>
+        <a href="#sobre" class="hover:text-orange-400 transition-colors">Sobre</a>
+        <a href="#galeria" class="hover:text-orange-400 transition-colors">Galeria</a>
+        <a href="#novidades" class="hover:text-orange-400 transition-colors">Novidades</a>
       </div>
-      <button onclick="copiarIP()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-emerald-400 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-all">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <!-- ATUALIZADO: text-emerald-400 -> text-orange-400, bg-emerald-500 -> bg-orange-500 -->
+      <button onclick="copiarIP()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-all">
+        <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
         <span id="ip-text">geluga.aternos.me:35452</span>
         <i class="fa-regular fa-copy ml-1"></i>
       </button>
@@ -65,18 +67,20 @@
   <header id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 px-6 text-center">
     <!-- Fundo com imagem e degradê escuro -->
     <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30025?q=80&w=1920&auto=format&fit=crop" alt="Minecraft Landscape" class="w-full h-full object-cover opacity-25">
+      <img src="https://media.discordapp.net/attachments/1474548818908545145/1530018667574726837/image.png?ex=6a640c6c&is=6a62baec&hm=2a995a0ed8b9d2f2df240be251f59d3a43c14f0ac4bd505cd6b56f8a09c9b909&=&format=webp&quality=lossless&width=1522&height=856" alt="Minecraft Landscape" class="w-full h-full object-cover opacity-25">
       <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
     </div>
 
     <!-- Conteúdo do Hero -->
     <div class="relative z-10 max-w-4xl mx-auto mt-12">
-      <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest inline-block mb-6 animate-bounce">
+      <!-- ATUALIZADO: Tons emerald -> orange -->
+      <span class="bg-orange-500/10 text-orange-400 border border-orange-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest inline-block mb-6 animate-bounce">
         🚀 Temporada 2 Online Agora
       </span>
       <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white leading-tight">
         O SEU NOVO MUNDO <br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">NO SERVIDOR GELUGA</span>
+        <!-- ATUALIZADO: from-emerald-400 -> from-orange-400 -->
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-cyan-400">NO SERVIDOR GELUGA</span>
       </h1>
       <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
         Sobrevivência com economia balanceada, terrenos protegidos, clãs épicos e eventos diários. Junte-se a mais de <strong class="text-white">5 jogadores</strong> registrados!
@@ -84,12 +88,14 @@
 
       <!-- BOTÃO PRINCIPAL DE DOWNLOAD -->
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#download" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-gamer text-lg py-5 px-10 rounded-2xl glow-green transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3">
+        <!-- ATUALIZADO: Tons emerald -> orange, classe glow-green -> glow-orange -->
+        <a href="#download" class="w-full sm:w-auto bg-orange-500 hover:bg-orange-400 text-slate-950 font-gamer text-lg py-5 px-10 rounded-2xl glow-orange transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3">
           <i class="fa-solid fa-download text-xl"></i>
           BAIXAR LAUNCHER GELUGA
         </a>
+        <!-- ATUALIZADO: text-emerald-400 -> text-orange-400 -->
         <button onclick="copiarIP()" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-white font-semibold py-5 px-8 rounded-2xl border border-slate-700 backdrop-blur-md transition-all flex items-center justify-center gap-3">
-          <i class="fa-solid fa-gamepad text-emerald-400"></i>
+          <i class="fa-solid fa-gamepad text-orange-400"></i>
           Copiar IP do Servidor
         </button>
       </div>
@@ -113,8 +119,9 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Card 1 -->
-      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
-        <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+      <!-- ATUALIZADO: Tons emerald -> orange -->
+      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-1 group">
+        <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
           <i class="fa-solid fa-coins"></i>
         </div>
         <h3 class="text-xl font-bold text-white mb-3">Economia Padrão</h3>
@@ -122,7 +129,8 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+      <!-- ATUALIZADO: Tons emerald -> orange -->
+      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-1 group">
         <div class="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
@@ -131,12 +139,13 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+      <!-- ATUALIZADO: Tons emerald -> orange -->
+      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-1 group">
         <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
           <i class="fa-solid fa-dragon"></i>
         </div>
-        <h3 class="text-xl font-bold text-white mb-3">Dungeons & Chefes</h3>
-        <p class="text-slate-400 leading-relaxed">Explore dimensões customizadas, enfrente monstros exclusivos e conquiste armaduras lendárias em eventos semanais.</p>
+        <h3 class="text-xl font-bold text-white mb-3">Create & Epic Fight</h3>
+        <p class="text-slate-400 leading-relaxed">Explore, enfrente monstros e conquiste armaduras lendárias.</p>
       </div>
     </div>
   </section>
@@ -149,7 +158,8 @@
           <h2 class="text-3xl md:text-5xl font-bold mb-4">UM MUNDO EM EVOLUÇÃO</h2>
           <p class="text-slate-400 text-lg">Confira algumas das construções fantásticas feitas por nossa comunidade.</p>
         </div>
-        <span class="text-emerald-400 font-semibold mt-4 md:mt-0 flex items-center gap-2">
+        <!-- ATUALIZADO: text-emerald-400 -> text-orange-400 -->
+        <span class="text-orange-400 font-semibold mt-4 md:mt-0 flex items-center gap-2">
           Shaders Recomendados: BSL v2 <i class="fa-solid fa-wand-magic-sparkles"></i>
         </span>
       </div>
@@ -191,9 +201,10 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <article class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between">
         <div>
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover">
+          <img src="https://media.discordapp.net/attachments/1474548818908545145/1530019507752669444/image.png?ex=6a640d35&is=6a62bbb5&hm=350e689bc0d4e6cb83fea31270b687fa96c13ff60f42079be835c500ac9a1717&=&format=webp&quality=lossless" class="w-full h-48 object-cover">
           <div class="p-6">
-            <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Patch 2.5.8.1</span>
+            <!-- ATUALIZADO: Tons emerald -> orange -->
+            <span class="text-xs font-bold text-orange-400 bg-orange-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Patch 2.5.8.1</span>
             <h3 class="text-xl font-bold text-white mt-4 mb-2">Correcoes de erros</h3>
             <p class="text-slate-400 text-sm leading-relaxed">Mic voltou a funcionar, mods foram re-organizados e um erro foi corrigido.</p>
           </div>
@@ -221,9 +232,9 @@
 
       <article class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between">
         <div>
-          <img src="https://images.unsplash.com/photo-1612287233203-51614b87d309?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover">
+          <img src="https://media.discordapp.net/attachments/1474548818908545145/1530019217645244639/image.png?ex=6a640cef&is=6a62bb6f&hm=1b2a8f7d8635f75cd2def1e9be6c309f2b38fdc71a4cbba025ac7ab017508605&=&format=webp&quality=lossless" class="w-full h-48 object-cover">
           <div class="p-6">
-            <span class="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Comunidade</span>
+            <span class="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Lutas</span>
             <h3 class="text-xl font-bold text-white mt-4 mb-2">Epic Fights</h3>
             <p class="text-slate-400 text-sm leading-relaxed">Agora você pode participar de combates de diversos modos, com um novo arsenal de armas e habilidades!</p>
           </div>
@@ -238,9 +249,11 @@
 
   <!-- CALL TO ACTION FINAL (DOWNLOAD) -->
   <section id="download" class="py-20 px-6 max-w-5xl mx-auto mb-20">
-    <div class="bg-gradient-to-r from-emerald-900/40 via-slate-900 to-slate-900 border border-emerald-500/30 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
+    <!-- ATUALIZADO: from-emerald-900 -> from-orange-950, border-emerald-500 -> border-orange-500 -->
+    <div class="bg-gradient-to-r from-orange-950/40 via-slate-900 to-slate-900 border border-orange-500/30 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
       <!-- Brilho de fundo -->
-      <div class="absolute -top-24 -left-24 w-60 h-60 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <!-- ATUALIZADO: bg-emerald-500 -> bg-orange-500 -->
+      <div class="absolute -top-24 -left-24 w-60 h-60 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
       
       <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">PRONTO PARA A AVENTURA?</h2>
       <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10">
@@ -248,8 +261,8 @@
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <!-- ATUALIZADO: Link de Download para Windows -->
-        <a href="https://github.com/tsukum0/geluga/releases/download/Download/gelauncher-portable-alpha-super-instavel-da-silva-v2.5.4.1.exe" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-gamer text-lg py-4 px-8 rounded-2xl glow-green transition-all duration-300 flex items-center justify-center gap-3">
+        <!-- ATUALIZADO: Tons emerald -> orange, classe glow-green -> glow-orange -->
+        <a href="https://github.com/tsukum0/geluga/releases/download/Download/gelauncher-portable-alpha-super-instavel-da-silva-v2.5.4.1.exe" target="_blank" class="bg-orange-500 hover:bg-orange-400 text-slate-950 font-gamer text-lg py-4 px-8 rounded-2xl glow-orange transition-all duration-300 flex items-center justify-center gap-3">
           <i class="fa-brands fa-windows text-2xl"></i>
           DOWNLOAD PARA WINDOWS
         </a>
@@ -274,10 +287,10 @@
       </div>
       <p>© 2026 Geluga. Não somos afiliados à Mojang AB.</p>
       <div class="flex gap-6 text-slate-400 text-lg">
-        <!-- ATUALIZADO: Link do Botão do Discord -->
-        <a href="https://discord.gg/Dwq5e8sDw4" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-discord"></i></a>
-        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+        <!-- ATUALIZADO: hover:text-emerald-400 -> hover:text-orange-400 -->
+        <a href="https://discord.gg/Dwq5e8sDw4" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition-colors"><i class="fa-brands fa-discord"></i></a>
+        <a href="#" class="hover:text-orange-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="hover:text-orange-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
   </footer>
