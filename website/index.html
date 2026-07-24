@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geluga - Servidor de Minecraft</title>
+  <!-- Tailwind CSS via CDN para um design moderno sem instalação -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts (Russo One para títulos gamer, Inter para texto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <!-- Ícones do FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-gamer { font-family: 'Russo One', sans-serif; }
+    
+    /* Efeito de brilho no botão principal */
+    .glow-green {
+      box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.6);
+    }
+    .glow-green:hover {
+      box-shadow: 0 0 50px 0px rgba(16, 185, 129, 0.9);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 overflow-x-hidden">
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center font-bold text-slate-950 text-xl shadow-lg shadow-emerald-500/30">G</div>
+        <span class="font-gamer text-2xl tracking-wider text-white">GELUGA</span>
+      </div>
+      <div class="hidden md:flex gap-8 font-semibold text-sm text-slate-300">
+        <a href="#inicio" class="hover:text-emerald-400 transition-colors">Início</a>
+        <a href="#sobre" class="hover:text-emerald-400 transition-colors">Sobre</a>
+        <a href="#galeria" class="hover:text-emerald-400 transition-colors">Galeria</a>
+        <a href="#novidades" class="hover:text-emerald-400 transition-colors">Novidades</a>
+      </div>
+      <button onclick="copiarIP()" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-emerald-400 px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-all">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span id="ip-text">geluga.aternos.me:35452</span>
+        <i class="fa-regular fa-copy ml-1"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- SEÇÃO PRINCIPAL (HERO) -->
+  <header id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 px-6 text-center">
+    <!-- Fundo com imagem e degradê escuro -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30025?q=80&w=1920&auto=format&fit=crop" alt="Minecraft Landscape" class="w-full h-full object-cover opacity-25">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+    </div>
+
+    <!-- Conteúdo do Hero -->
+    <div class="relative z-10 max-w-4xl mx-auto mt-12">
+      <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest inline-block mb-6 animate-bounce">
+        🚀 Temporada 5 Online Agora
+      </span>
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white leading-tight">
+        O SEU NOVO MUNDO <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">NO SERVIDOR GELUGA</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+        Sobrevivência com economia balanceada, terrenos protegidos, clãs épicos e eventos diários. Junte-se a mais de <strong class="text-white">5 jogadores</strong> registrados!
+      </p>
+
+      <!-- BOTÃO PRINCIPAL DE DOWNLOAD -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#download" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-gamer text-lg py-5 px-10 rounded-2xl glow-green transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3">
+          <i class="fa-solid fa-download text-xl"></i>
+          BAIXAR LAUNCHER GELUGA
+        </a>
+        <button onclick="copiarIP()" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-white font-semibold py-5 px-8 rounded-2xl border border-slate-700 backdrop-blur-md transition-all flex items-center justify-center gap-3">
+          <i class="fa-solid fa-gamepad text-emerald-400"></i>
+          Copiar IP do Servidor
+        </button>
+      </div>
+
+      <!-- Indicador de Scroll -->
+      <div class="mt-24">
+        <p class="text-xs text-slate-500 uppercase tracking-widest font-semibold mb-2">Explore o servidor</p>
+        <a href="#sobre" class="inline-block text-slate-400 hover:text-white transition-colors">
+          <i class="fa-solid fa-chevron-down text-xl animate-bounce"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEÇÃO DE DESTAQUES (SOBRE) -->
+  <section id="sobre" class="py-32 px-6 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">POR QUE JOGAR NO GELUGA?</h2>
+      <p class="text-slate-400 text-lg">Desenvolvemos sistemas próprios para garantir que a sua experiência de sobrevivência seja fluida, justa e inesquecível.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+        <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Economia Padrão</h3>
+        <p class="text-slate-400 leading-relaxed">Monte seu próprio mercado, negocie itens raros do servidor e domine a economia local.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+        <div class="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Proteção de Terreno</h3>
+        <p class="text-slate-400 leading-relaxed">Sua construção, suas regras. Reivindique terras facilmente.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+        <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-dragon"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Dungeons & Chefes</h3>
+        <p class="text-slate-400 leading-relaxed">Explore dimensões customizadas, enfrente monstros exclusivos e conquiste armaduras lendárias em eventos semanais.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA DE IMAGENS -->
+  <section id="galeria" class="py-24 bg-slate-900/30 border-y border-slate-900 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold mb-4">UM MUNDO EM EVOLUÇÃO</h2>
+          <p class="text-slate-400 text-lg">Confira algumas das construções fantásticas feitas por nossa comunidade.</p>
+        </div>
+        <span class="text-emerald-400 font-semibold mt-4 md:mt-0 flex items-center gap-2">
+          Shaders Recomendados: BSL v2 <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </span>
+      </div>
+
+      <!-- Grid de Galeria -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+        <div class="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8">
+            <span class="text-white font-bold text-xl">Discord</span>
+          </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden relative group">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
+            <span class="text-white font-semibold">Dark Empire</span>
+          </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden relative group">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
+            <span class="text-white font-semibold">Luiz's empire</span>
+          </div>
+        </div>
+        <div class="md:col-span-2 rounded-3xl overflow-hidden relative group">
+          <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8">
+            <span class="text-white font-bold text-xl">Foto da semana</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÚLTIMAS NOVIDADES (CONTEÚDO PARA SCROLL) -->
+  <section id="novidades" class="py-32 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center">ATUALIZAÇÕES DO SERVIDOR</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <article class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Patch 3.2</span>
+            <h3 class="text-xl font-bold text-white mt-4 mb-2">Expansão do End e Novos Minérios</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">O ender dragon ja foi derrotado, o territorio pode ser explorado naturalmente.</p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex justify-between items-center text-xs text-slate-500">
+          <span>20 Jul, 2026</span>
+          <span class="text-slate-400 hover:text-white cursor-pointer transition-colors">Ler tudo →</span>
+        </div>
+      </article>
+
+      <article class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-xs font-bold text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Evento</span>
+            <h3 class="text-xl font-bold text-white mt-4 mb-2">Se voce viu isso, parabens</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Prépare suas armaduras! O clã vencedor levará a coroa do servidor.</p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex justify-between items-center text-xs text-slate-500">
+          <span>18 Jul, 2026</span>
+          <span class="text-slate-400 hover:text-white cursor-pointer transition-colors">Ler tudo →</span>
+        </div>
+      </article>
+
+      <article class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden flex flex-col justify-between">
+        <div>
+          <img src="https://images.unsplash.com/photo-1612287233203-51614b87d309?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full uppercase tracking-wider">Comunidade</span>
+            <h3 class="text-xl font-bold text-white mt-4 mb-2">Epic Fights</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Agora você pode participar de combates de diversos modos, com um novo arsenal de armas e habilidades!</p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-2 border-t border-slate-800/60 flex justify-between items-center text-xs text-slate-500">
+          <span>15 Jul, 2026</span>
+          <span class="text-slate-400 hover:text-white cursor-pointer transition-colors">Ler tudo →</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION FINAL (DOWNLOAD) -->
+  <section id="download" class="py-20 px-6 max-w-5xl mx-auto mb-20">
+    <div class="bg-gradient-to-r from-emerald-900/40 via-slate-900 to-slate-900 border border-emerald-500/30 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
+      <!-- Brilho de fundo -->
+      <div class="absolute -top-24 -left-24 w-60 h-60 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">PRONTO PARA A AVENTURA?</h2>
+      <p class="text-slate-300 text-lg max-w-xl mx-auto mb-10">
+        Nosso cliente já vem otimizado com mods de desempenho pré-configurados para a melhor experiência visual.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-gamer text-lg py-4 px-8 rounded-2xl glow-green transition-all duration-300 flex items-center justify-center gap-3">
+          <i class="fa-brands fa-windows text-2xl"></i>
+          DOWNLOAD PARA WINDOWS
+        </a>
+        <a href="#" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-4 px-8 rounded-2xl border border-slate-600 transition-all flex items-center justify-center gap-3">
+          <i class="fa-brands fa-apple text-2xl"></i>
+          MAC / LINUX
+        </a>
+      </div>
+      <p class="text-xs text-slate-500 mt-6">Compatível com Minecraft Java Edition 1.21.1 • Suporte a conta Original e Alternativa</p>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-12 px-6 text-slate-500 text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-slate-800 rounded flex items-center justify-center font-bold text-white">G</div>
+        <span class="font-gamer text-white tracking-wider">GELUGA NETWORK</span>
+      </div>
+      <p>© 2026 Geluga. Não somos afiliados à Mojang AB.</p>
+      <div class="flex gap-6 text-slate-400 text-lg">
+        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-discord"></i></a>
+        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT SIMPLES PARA COPIAR IP -->
+  <script>
+    function copiarIP() {
+      navigator.clipboard.writeText("geluga.aternos.me:35452");
+      const btnText = document.getElementById("ip-text");
+      const originalText = btnText.innerText;
+      
+      btnText.innerText = "IP COPIADO!";
+      btnText.classList.add("text-white");
+      
+      setTimeout(() => {
+        btnText.innerText = originalText;
+        btnText.classList.remove("text-white");
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
