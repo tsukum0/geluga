@@ -6,7 +6,7 @@
       "id": "geluga-padrao",
       "name": "Geluga Padrão (Temporada 2)",
       "mc_version": "1.21.1",
-      "neoforge_version": "neoforge-21.1.243",
+      "neoforge_version": "21.1.243",
       "mods": [
         {
           "name": "Chat Heads",
@@ -294,7 +294,7 @@
       "id": "geluga-lite",
       "name": "Geluga Lite (FPS Boost)",
       "mc_version": "1.21.1",
-      "neoforge_version": "neoforge-21.1.243",
+      "neoforge_version": "21.1.243",
       "mods": [
         {
           "name": "Resourceful Lib",
