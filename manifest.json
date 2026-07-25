@@ -5,8 +5,8 @@
     {
       "id": "geluga-padrao",
       "name": "Geluga Padrão (Temporada 2)",
-      "mc_version": "1.20.4",
-      "neoforge_version": "neoforge-20.4.237",
+      "mc_version": "1.21.1",
+      "neoforge_version": "neoforge-21.1.243",
       "mods": [
         { "name": "jei", "modrinth_version_id": "84s5EAC4" },
         { "name": "ferritecore", "modrinth_version_id": "uRk1E19W" }
@@ -15,8 +15,8 @@
     {
       "id": "geluga-lite",
       "name": "Geluga Lite (FPS Boost)",
-      "mc_version": "1.20.4",
-      "neoforge_version": "neoforge-20.4.237",
+      "mc_version": "1.21.1",
+      "neoforge_version": "neoforge-21.1.243",
       "mods": [
         { "name": "sodium", "modrinth_version_id": "mc1.20.4-0.5.8" },
         { "name": "lithium", "modrinth_version_id": "mc1.20.4-0.12.1" }
