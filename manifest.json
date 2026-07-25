@@ -1,6 +1,6 @@
 {
   "launcher_version": "1.0.0",
-  "launcher_update_url": "https://github.com/SeuUsuario/GelugaLauncher/releases/latest",
+  "launcher_update_url": "https://github.com/tsukum0/geluga/releases",
   "profiles": [
     {
       "id": "geluga-padrao",
