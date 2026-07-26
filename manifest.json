@@ -564,12 +564,6 @@
           "damageTiltStrength": "1.0",
           "highContrast": "false",
           "narratorHotkey": "true",
-          "resourcePacks": [
-              "vanilla",
-              "programmer_art",
-              "fabric",
-              "mod_resources"
-          ],
           "incompatibleResourcePacks": [],
           "lastServer": "",
           "lang": "en_us",
